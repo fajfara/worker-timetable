@@ -34,7 +34,7 @@ export default class Timetable extends Component {
 
               </div>
               <div className="col-10 hours">
-                <h2>Grafični prikaz dela delavcev</h2>
+                <h2>Grafični prikaz izmen delavcev</h2>
               </div>
             </div>
             
