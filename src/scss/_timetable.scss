@@ -1,9 +1,10 @@
 .timetable {
-    height: 30rem;
+    height: 100%;
 
 
-    &--edit-area {
-        
+    &--legend {
+        background-color: white;
+        padding-bottom: 1rem;
     }
 
     &-main-area {
@@ -12,9 +13,36 @@
         &--worker{
             position: relative;
             height: 2rem;
+            padding: 1.5rem;
+            
+            p {
+                position: relative;
+                top: 67%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                &:hover + .timetable-main-area--worker-info-box {
+                    opacity: 1;
+                    z-index: 101;
+                }
+            }
+
+            &-info-box{
+                position: absolute;
+                top: -3rem;
+                background: #111;
+                padding: 1rem;
+                width: 100%;
+                opacity: 0;
+                transition: all 1s ease-in;
+            }
             &--display {
                 position: absolute;
                 height: 100%;
+                color: $white;
+                
             }
         }
     }
@@ -22,6 +50,12 @@
         position: relative;
         &-start {
             float: left;
+        }
+
+        &-middle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         &-end {
@@ -32,20 +66,22 @@
 
     .worker-one {
         width: 50%;
-        background-color: yellow;
+        background-color: $princeton-orange;
         left: 0;
+        z-index: 100;
     }
 
     .worker-two {
         width: 45%;
-        background-color: green;
+        background-color: $android-green;
         left: 5%;
     }
 
     .worker-three {
         width: 50%;
-        background-color: red;
+        background-color: $flame-red;
         left: 50%;
+        z-index: 100;
     }
 
     .worker-four {
